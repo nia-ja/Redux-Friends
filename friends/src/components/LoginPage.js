@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from "react-redux";
+import Loader from "react-loader-spinner";
 import { login } from '../actions';
 
 class LoginPage extends React.Component {
@@ -26,8 +27,6 @@ class LoginPage extends React.Component {
     }
 
     render() {
-        console.log(this.state.credentials.username);
-        console.log(this.state.credentials.password);
         return (
             <div className='login-page-wrapper'>
                 <h2>Login</h2>
@@ -48,11 +47,23 @@ class LoginPage extends React.Component {
                         onChange={this.handleChange}
                         required
                     />
-                    <button>Log in</button>
+                    <button>
+                        { this.props.isLoggingIn ? (
+                            <Loader type="ThreeDots" color="#1f2a38" height="12" width="26" />
+                        ) : (
+                            "Log in"
+                        )}
+                    </button>
                 </form>
             </div>
         )
     }
 }
 
-export default connect(null, { login })(LoginPage);
+const mapStateToProps = state => {
+    return {
+      isLoggingIn: state.isLoggingIn
+    };
+};
+
+export default connect(mapStateToProps, { login })(LoginPage);

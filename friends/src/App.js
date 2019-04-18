@@ -10,11 +10,15 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <nav>
-          <Link to='/'>Home</Link>
-          <Link to='/login'>Log in</Link>
-          <Link to='/friends-list'>Frieds List</Link>
-        </nav>
+        <header>
+          <h1>Friends List</h1>
+          <nav>
+            <Link to='/'>Home</Link>
+            <Link to='/login'>Log in</Link>
+            <Link to='/friends-list'>Frieds List</Link>
+          </nav>
+        </header>
+        
         <Route exact path='/' component={HomePage} />
         <Route path='/login' component={LoginPage} />
         <PrivateRoute path='/friends-list' component={FriendsList} />
