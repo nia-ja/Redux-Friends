@@ -81,15 +81,20 @@ header h1 a {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  margin-right: 10%;
 }
-.user-greeting .user-icon {
+.user-icon {
   height: 30px;
   width: 30px;
   margin-right: 5%;
 }
-header nav p {
-  color: white;
+.user-greeting p {
+  color: #fcfae5;
+}
+.user-greeting p:hover {
+  cursor: pointer;
+  text-decoration: underline;
+  text-decoration-color: #c15304;
+  color: #c15304;
 }
 header nav {
   width: 60%;
@@ -122,10 +127,54 @@ header nav a:hover {
 
 /* FORM */
 .form.display {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 20px 0 40px 0;
+  padding: 20px;
+  background: rgba(4, 2, 0, .6);
+  box-shadow:0 0 10px rgba(255, 255, 255, 0.2);
 }
 .form.hidden {
   display: none;
+}
+.add-friend-inputs {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.form.display input {
+  width: 25%;
+  /* margin-right: 3%; */
+  border: none;
+  padding: 7px;
+  font-size: 16px;
+}
+.form.display input:focus {
+  outline: none;
+  background: #c15304;
+  color: white;
+}
+.form.display button {
+  padding: 7px 10px;
+  background: #c15304;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  font-weight: bold;
+  font-size: 16px;
+}
+.form.display button:hover {
+  cursor: pointer;
+  background: white;
+  color: #c15304;
+}
+.form.display button:focus {
+  outline: none;
 }
 .new-friend.hidden {
   width: 100%;
@@ -138,6 +187,7 @@ header nav a:hover {
 }
 .add-friend {
   align-self: center;
+  width: 7%;
 }
 
 .friend {
@@ -161,4 +211,79 @@ header nav a:hover {
 font-weight: bold;
 color: #c15304;
 margin-right: 10px;
+}
+
+/* LOGIN */
+.login-page-wrapper {
+  width: 40%;
+  margin: 90px auto 0 auto;
+  padding: 40px 20px;
+  background: rgba(4, 2, 0, .6);
+  box-shadow:0 0 10px rgba(255, 255, 255, 0.2);
+}
+.login-page-wrapper h2 {
+  width: 60%;
+  margin: 0 auto 40px auto;
+  color: #fcfae5;
+  text-align: center;
+  font-size: 35px;
+  line-height: 45px;
+}
+.login-page-wrapper form {
+  width: 60%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.login-page-wrapper form input {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 10px;
+  border: none;
+  font-size: 16px;
+}
+.login-page-wrapper form input:focus {
+  outline: none;
+  background: #c15304;
+  color: white;
+}
+.login-page-wrapper form button {
+  width: 30%;
+  padding: 7px 10px;
+  background: #c15304;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  font-weight: bold;
+  font-size: 16px;
+}
+.login-page-wrapper form button:hover {
+  cursor: pointer;
+  background: white;
+  color: #c15304;
+}
+.login-page-wrapper form button:focus {
+  outline: none;
+}
+
+/* Home Page */
+.home-page-wrapper {
+  width: 60%;
+  margin: 0 auto;
+  color: white;
+  background: rgba(4, 2, 0, .6);
+  box-shadow:0 0 10px rgba(255, 255, 255, 0.2);
+  padding: 20px;
+}
+.home-page-wrapper h1 {
+  width: 100%;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  font-size: 40px;
+  text-align: center;
+}
+
+.home-page-wrapper p {
+  
 }

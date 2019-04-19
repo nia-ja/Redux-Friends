@@ -29,7 +29,7 @@ class LoginPage extends React.Component {
     render() {
         return (
             <div className='login-page-wrapper'>
-                <h2>Login</h2>
+                <h2>Meet<br/>your Friends</h2>
                 <form onSubmit={this.login}>
                     <input
                         type='text'

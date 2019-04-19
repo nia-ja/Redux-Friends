@@ -9,6 +9,13 @@ import { connect } from "react-redux";
 import userIcon from './img/icon-user.png';
 
 class App extends Component {
+
+  logOut = e => {
+    e.preventDefault();
+    localStorage.removeItem("token");
+    localStorage.removeItem("username");
+    window.location.reload();
+  }
   render() {
     return (
       <div className="App">
@@ -17,9 +24,8 @@ class App extends Component {
           <nav>
             <div className='user-greeting'>
               <img className='user-icon' src={userIcon} />
-              {this.props.username ? (<p>Hi, {this.props.username}</p>) : (<p>Hi, user</p>)}
+              {this.props.username ? (<p onClick={this.logOut}>{this.props.username}</p>) : (<Link to='/login'>Log in</Link>)}
             </div>
-            <Link to='/login'>Log in</Link>
             <Link to='/friends-list'>Friends List</Link>
           </nav>
         </header>

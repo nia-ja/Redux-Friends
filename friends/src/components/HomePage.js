@@ -3,7 +3,7 @@ import React from 'react';
 const HomePage = props => {
     return (
         <div className='home-page-wrapper'>
-            <h1>Home Page</h1>
+            <h1>Friends and Family</h1>
 
             <p>Bro ipsum dolor sit amet 360 lid stoked skinny, rail poaching skid grip tape sketching poaching spread eagle McTwist hardtail. Smear dirt bro apres table top bomb hole jib gapers fully first tracks flow crank. Hardtail bump gaper face shots, 180 white room carbon rig manny. Japan air park rat OTB stoked big ring liftie whip yard sale frontside nose. Sharkbite bomb hole huckfest, taco carve poaching gaper pow pow.</p>
 

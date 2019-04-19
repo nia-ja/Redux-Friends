@@ -43,30 +43,32 @@ class FriendsList extends React.Component {
                 </div>
 
                 <form className={`form ${this.state.className}`} onSubmit={this.submitHandler}>
-                    <input
-                        type='text'
-                        name='name'
-                        placeholder='name'
-                        value={this.state.name}
-                        onChange={this.handleChange}
-                        required
-                    />
-                    <input
-                        type='number'
-                        name='age'
-                        placeholder='age'
-                        value={this.state.age}
-                        onChange={this.handleChange}
-                        required
-                    />
-                    <input
-                        type='email'
-                        name='email'
-                        placeholder='email'
-                        value={this.state.email}
-                        onChange={this.handleChange}
-                        required
-                    />
+                    <div className="add-friend-inputs">
+                        <input
+                            type='text'
+                            name='name'
+                            placeholder='name'
+                            value={this.state.name}
+                            onChange={this.handleChange}
+                            required
+                        />
+                        <input
+                            type='number'
+                            name='age'
+                            placeholder='age'
+                            value={this.state.age}
+                            onChange={this.handleChange}
+                            required
+                        />
+                        <input
+                            type='email'
+                            name='email'
+                            placeholder='email'
+                            value={this.state.email}
+                            onChange={this.handleChange}
+                            required
+                        />
+                    </div>
                     <button type='submit'>Add Friend</button>
                 </form>
 
