@@ -94,6 +94,7 @@ app.post('/api/friends', authenticator, (req, res) => {
   const friend = { id: getNextId(), ...req.body };
 
   friends = [...friends, friend];
+  nextId++;
 
   res.send(friends);
 });
@@ -126,7 +127,7 @@ app.delete('/api/friends/:id', authenticator, (req, res) => {
 });
 
 function getNextId() {
-  return nextId + 1;
+  return nextId;
 }
 
 app.listen(port, () => {

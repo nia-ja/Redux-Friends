@@ -11,7 +11,7 @@ export const login = (credentials) => dispatch => {
         .post('http://localhost:5000/api/login', {username: 'Lambda School', password: 'i<3Lambd4'})
         .then(res => {
             localStorage.setItem('token', res.data.payload);
-            dispatch({ type: LOGIN_SUCCESS, payload: res.data });
+            dispatch({ type: LOGIN_SUCCESS, payload: res.data, credentials: credentials});
         })
         .catch(err => {
             if (err.response.status === 403) {
@@ -32,17 +32,34 @@ export const getFriends = () => dispatch => {
         headers: { Authorization: localStorage.getItem("token") }
       })
       .then(res => {
-        console.log(res);
         dispatch({
           type: FETCH_DATA_SUCCESS,
           payload: res.data
         });
       })
       .catch(err => {
-        console.log(err.response);
-        // if (err.response.status === 403) {
-        //   localStorage.removeItem("token");
-        // }
         dispatch({ type: FETCH_DATA_FAILURE, payload: err.response });
+      });
+  };
+
+  export const ADD_FRIEND_START = 'ADD_FRIEND_START';
+  export const ADD_FRIEND_SUCCESS = 'ADD_FRIEND_SUCCESS';
+  export const ADD_FRIEND_FAILURE = 'ADD_FRIEND_FAILURE';
+
+
+  export const addFriend = newFriend => dispatch => {
+    dispatch({ type: ADD_FRIEND_START });
+    axios
+      .post("http://localhost:5000/api/friends", newFriend, {
+        headers: { Authorization: localStorage.getItem("token") }
+      })
+      .then(res => {
+        dispatch({
+          type: ADD_FRIEND_SUCCESS,
+          payload: res.data
+        });
+      })
+      .catch(err => {
+        dispatch({ type: ADD_FRIEND_FAILURE, payload: err.response });
       });
   };
