@@ -1,0 +1,289 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+} /*<----- reset */
+
+body {
+  background: #040200;
+}
+.App {
+  width: 100%;
+  height: 100vh;
+  background-image: url('./img/boys-children-chinese-lanterns-788969.jpg');
+  background-size: 100%;
+  background-position-y: -70px;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 4%;
+  margin-bottom: 20px;
+  background: #040200;
+  border-bottom: 1px solid #c15304;
+}
+header h1 {
+  width: 30%;
+  text-transform: uppercase;
+  font-size: 30px;
+  font-weight: bold;
+}
+header h1 a {
+  color: #c15304;
+  text-decoration: none;
+}
+.user-greeting {
+  width: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.user-icon {
+  height: 30px;
+  width: 30px;
+  margin-right: 5%;
+}
+.user-greeting p {
+  color: #fcfae5;
+}
+.user-greeting p:hover {
+  cursor: pointer;
+  text-decoration: underline;
+  text-decoration-color: #c15304;
+  color: #c15304;
+}
+header nav {
+  width: 60%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 18px;
+  font-weight: bold;
+}
+header nav a {
+  margin-left: 4%;
+  text-decoration: none;
+  color: #fcfae5;
+}
+header nav a:hover {
+  cursor: pointer;
+  color: #c15304;
+  text-decoration: underline;
+  text-decoration-color: #c15304;
+}
+
+.friends-list-wrapper {
+  width: 60%;
+  margin: 0 auto 40px auto;
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/* FORM */
+.form.display {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 20px 0 40px 0;
+  padding: 20px;
+  background: rgba(4, 2, 0, .6);
+  box-shadow:0 0 10px rgba(255, 255, 255, 0.2);
+}
+.form.hidden {
+  display: none;
+}
+.add-friend-inputs {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.form.display input {
+  width: 25%;
+  /* margin-right: 3%; */
+  border: none;
+  padding: 7px;
+  font-size: 16px;
+}
+.form.display input:focus {
+  outline: none;
+  background: #c15304;
+  color: white;
+}
+.form.display button {
+  padding: 7px 10px;
+  background: #c15304;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  font-weight: bold;
+  font-size: 16px;
+}
+.form.display button:hover {
+  cursor: pointer;
+  background: white;
+  color: #c15304;
+}
+.form.display button:focus {
+  outline: none;
+}
+.new-friend.hidden {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+.new-friend.display {
+  display: none;
+}
+.add-friend {
+  align-self: center;
+  width: 7%;
+}
+
+.friend {
+  width: 45%;
+  margin: 0 0 20px 0;
+  border-bottom: 0.5px solid rgba(193, 83, 4, .3);
+  padding: 20px 0;
+  background: rgba(4, 2, 0, .6);
+  box-shadow:0 0 10px rgba(255, 255, 255, 0.2);
+}
+.friend:hover {
+  background: rgba(4, 2, 0, 1);
+  color: wheat;
+}
+.friend p {
+  font-size: 18px;
+  margin-bottom: 10px;
+  padding: 0 5%;
+}
+.friend p span {
+font-weight: bold;
+color: #c15304;
+margin-right: 10px;
+}
+
+/* LOGIN */
+.login-page-wrapper {
+  width: 40%;
+  margin: 90px auto 0 auto;
+  padding: 40px 20px;
+  background: rgba(4, 2, 0, .6);
+  box-shadow:0 0 10px rgba(255, 255, 255, 0.2);
+}
+.login-page-wrapper h2 {
+  width: 60%;
+  margin: 0 auto 40px auto;
+  color: #fcfae5;
+  text-align: center;
+  font-size: 35px;
+  line-height: 45px;
+}
+.login-page-wrapper form {
+  width: 60%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.login-page-wrapper form input {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 10px;
+  border: none;
+  font-size: 16px;
+}
+.login-page-wrapper form input:focus {
+  outline: none;
+  background: #c15304;
+  color: white;
+}
+.login-page-wrapper form button {
+  width: 30%;
+  padding: 7px 10px;
+  background: #c15304;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  font-weight: bold;
+  font-size: 16px;
+}
+.login-page-wrapper form button:hover {
+  cursor: pointer;
+  background: white;
+  color: #c15304;
+}
+.login-page-wrapper form button:focus {
+  outline: none;
+}
+
+/* Home Page */
+.home-page-wrapper {
+  width: 60%;
+  margin: 0 auto;
+  color: white;
+  background: rgba(4, 2, 0, .6);
+  box-shadow:0 0 10px rgba(255, 255, 255, 0.2);
+  padding: 20px;
+}
+.home-page-wrapper h1 {
+  width: 100%;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  font-size: 40px;
+  text-align: center;
+}
+
+.home-page-wrapper p {
+  
+}
